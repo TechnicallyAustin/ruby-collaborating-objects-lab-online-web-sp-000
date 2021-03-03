@@ -19,7 +19,11 @@ class Artist
   end
   
   def find(name)
-    self.detect. { |artist| artist.name ==  name)
+    self.detect { |artist| artist.name ==  name)
+  end
+  
+   def find_or_create_by_name(artist)
+     self.find(name) || self.create(name)
   end
   
   def add_song(song_title)
@@ -30,10 +34,6 @@ class Artist
     @songs.all
   end
   
-
-  def find_or_create_by_name(artist)
-
-  end
   
   def print_songs
     @songs.each do |song|
