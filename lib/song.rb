@@ -1,8 +1,9 @@
 class Song
   attr_accessor :name, :artist
-
+@@all = []
   def initialize(name)
     @name = name
+    save
   end
 
   def self.new_by_filename(file)
@@ -18,4 +19,9 @@ class Song
     self.artist = artist
     artist.add_song(self)
   end
+  
+  def save
+    @@all << self
+  end
+  
 end 
