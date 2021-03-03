@@ -20,6 +20,10 @@ class Song
     artist.add_song(self)
   end
   
+  def self.all
+    @@all
+  end
+  
   def save
     @@all << self
   end
