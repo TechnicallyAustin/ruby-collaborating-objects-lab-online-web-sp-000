@@ -40,4 +40,6 @@ class Artist
       song
     end
   end
+  
+end
     
